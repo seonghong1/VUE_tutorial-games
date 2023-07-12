@@ -1,4 +1,7 @@
 <template>
+  <RouterLink to="/post">move post</RouterLink>
+  <RouterLink to="/postDetail">move postDetail</RouterLink>
+  <router-view />
   <div class="nav">
     <a href="" v-for="(Nav_menu, i) in Nav_menus" :key="i">{{ Nav_menu }}</a>
   </div>
@@ -32,6 +35,7 @@
 </template>
 
 <script>
+import { RouterLink } from "vue-router";
 import products from "./assets/data";
 import GamesWrap from "./components/game/GamesWrap.vue";
 
@@ -60,6 +64,7 @@ export default {
   },
   components: {
     GamesWrap: GamesWrap,
+    RouterLink: RouterLink,
   },
 };
 </script>
